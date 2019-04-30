@@ -1,18 +1,17 @@
 {
-  "name": "gatsby-starter-mate",
-  "version": "2.2.0",
-  "description": "Gatsby v2 starter to create a top notch portfolio!",
+  "name": "Cool-portfolio",
+  "version": "1.0.0",
+  "description": "My portfolio that can be used as a playground",
   "main": "index.js",
   "scripts": {
     "build": "cleandir ./.cache && gatsby build",
     "develop": "cleandir ./.cache && gatsby develop",
     "start": "npm run develop",
-    "lint": "eslint ./src",
-    "setup": "node ./bin/setup.js"
+    "lint": "eslint ./src"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/EmaSuriano/gatsby-starter-mate.git"
+    "url": "git+https://github.com/loicmasson2/Cool-portfolio"
   },
   "keywords": [
     "gatsby",
@@ -21,12 +20,12 @@
     "PWA",
     "portfolio"
   ],
-  "author": "Ema Suriano",
+  "author": "Loïc Masson",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/EmaSuriano/gatsby-starter-mate/issues"
+    "url": "https://github.com/loicmasson2/Cool-portfolio"
   },
-  "homepage": "https://github.com/EmaSuriano/gatsby-starter-mate#readme",
+  "homepage": "https://github.com/loicmasson2/Cool-portfolio#readme",
   "dependencies": {
     "clean-dir": "^1.0.3",
     "contentful": "^7.0.3",

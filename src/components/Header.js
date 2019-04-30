@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import Headroom from 'react-headroom';
 import { Flex, Image } from 'rebass';
 import styled from 'styled-components';
@@ -47,7 +47,7 @@ const Header = () => (
         <SectionLinks>
           {({ allLinks }) => {
             const { home, links } = formatLinks(allLinks);
-
+            console.log(links);
             const homeLink = home && (
               <Image
                 src={Logo}
@@ -70,10 +70,10 @@ const Header = () => (
             ));
 
             return (
-              <Fragment>
+              <>
                 {homeLink}
                 <Flex mr={[0, 3, 5]}>{navLinks}</Flex>
-              </Fragment>
+              </>
             );
           }}
         </SectionLinks>
