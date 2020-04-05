@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import { SectionLink } from 'react-scroll-section';
 import styled from 'styled-components';
@@ -20,7 +21,7 @@ const StyledLink = styled.a`
     content: '';
     width: 100%;
     height: 3px;
-    background-color: ${props => props.theme.colors.primaryLight};
+    background-color: ${(props) => props.theme.colors.primaryLight};
     transition: all 250ms;
   }
 
@@ -70,8 +71,8 @@ MarkdownLink.propTypes = {
 };
 
 export default {
-  paragraph: props => <MarkdownParagraph {...props} />,
-  list: props => <MarkdownList {...props} />,
-  listItem: props => <MarkdownListItem {...props} />,
+  paragraph: (props) => <MarkdownParagraph {...props} />,
+  list: (props) => <MarkdownList {...props} />,
+  listItem: (props) => <MarkdownListItem {...props} />,
   link: MarkdownLink,
 };

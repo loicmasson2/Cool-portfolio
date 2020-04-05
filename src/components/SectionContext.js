@@ -9,12 +9,13 @@ const { Provider, Consumer } = React.createContext({
 });
 
 export class SectionProvider extends React.Component {
-  state = {
-    sections: [],
-  };
+  constructor(props) {
+    super(props);
+    this.state = { sections: [] };
+  }
 
-  addSection = section =>
-    this.setState(state => ({ sections: [...state.sections, section] }));
+  addSection = (section) =>
+    this.setState((state) => ({ sections: [...state.sections, section] }));
 
   render() {
     const { sections } = this.state;

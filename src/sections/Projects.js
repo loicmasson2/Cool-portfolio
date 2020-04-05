@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Image, Text, Flex, Box } from 'rebass';
@@ -53,7 +54,7 @@ const Title = styled(Text)`
   font-weight: 600;
   text-transform: uppercase;
   display: table;
-  border-bottom: ${props => props.theme.colors.primary} 5px solid;
+  border-bottom: ${(props) => props.theme.colors.primary} 5px solid;
 `;
 
 const TextContainer = styled.div`
@@ -177,6 +178,7 @@ Project.propTypes = {
     image: PropTypes.shape({
       src: PropTypes.string,
     }),
+    title: PropTypes.string,
   }).isRequired,
 };
 

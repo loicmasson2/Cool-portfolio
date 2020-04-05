@@ -1,4 +1,5 @@
-import React, { Fragment } from 'react';
+/* eslint-disable react/jsx-props-no-spreading */
+import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import { Heading, Flex, Box, Text } from 'rebass';
 import TextLoop from 'react-text-loop';
@@ -56,11 +57,11 @@ const LandingPage = () => (
           }
         }
       `}
-      render={data => {
+      render={(data) => {
         const { name, socialLinks, roles } = data.contentfulAbout;
 
         return (
-          <Fragment>
+          <>
             <Heading
               textAlign="center"
               as="h1"
@@ -79,7 +80,7 @@ const LandingPage = () => (
               textAlign="center"
             >
               <TextLoop>
-                {roles.map(text => (
+                {roles.map((text) => (
                   <Text width={[300, 500]} key={text}>
                     {text}
                   </Text>
@@ -97,7 +98,7 @@ const LandingPage = () => (
             <SectionLink section="about">
               {({ onClick }) => <MouseIcon onClick={onClick} />}
             </SectionLink>
-          </Fragment>
+          </>
         );
       }}
     />

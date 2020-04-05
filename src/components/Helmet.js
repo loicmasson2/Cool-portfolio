@@ -28,7 +28,7 @@ const Helmet = ({ theme = {} }) => (
         }
       }
     `}
-    render={data => {
+    render={(data) => {
       const { name, description, profile } = data.contentfulAbout;
       const title = `${name} Portofolio`;
 
@@ -56,7 +56,10 @@ const Helmet = ({ theme = {} }) => (
           <meta name="twitter:title" content={title} />
           <meta name="twitter:description" content={description} />
           <meta name="twitter:image" content={`https:${profile.bigIcon.src}`} />
-          <meta name="twitter:image:src" content={`https:${profile.bigIcon.src}`} />
+          <meta
+            name="twitter:image:src"
+            content={`https:${profile.bigIcon.src}`}
+          />
 
           <link
             rel="apple-touch-icon"

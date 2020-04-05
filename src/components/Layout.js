@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import PropTypes from 'prop-types';
 import { ScrollingProvider } from 'react-scroll-section';
@@ -27,7 +27,7 @@ body {
 config({ ssrFadeout: true });
 
 const Layout = ({ children }) => (
-  <Fragment>
+  <>
     <GlobalStyle />
     <ThemeProvider theme={{ colors }}>
       <ScrollingProvider>
@@ -35,7 +35,7 @@ const Layout = ({ children }) => (
         {children}
       </ScrollingProvider>
     </ThemeProvider>
-  </Fragment>
+  </>
 );
 
 Layout.propTypes = {

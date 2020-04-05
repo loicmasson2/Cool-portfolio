@@ -7,7 +7,7 @@ const breakpoints = {
   lg: '@media screen and (min-width: 64em)',
 };
 
-const hidden = key => props =>
+const hidden = (key) => (props) =>
   props[key] && {
     [breakpoints[key]]: {
       display: 'none',
@@ -19,7 +19,7 @@ const sm = hidden('sm');
 const md = hidden('md');
 const lg = hidden('lg');
 
-const customQuery = props =>
+const customQuery = (props) =>
   props.query && {
     [props.query]: {
       display: 'none',

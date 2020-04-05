@@ -8,8 +8,8 @@ import GatsbyLogo from './Logo/Gatsby.svg';
 
 const FooterContainer = styled.footer`
   padding: 1em;
-  background: ${props => props.theme.colors.primaryDark};
-  color: ${props => props.theme.colors.background};
+  background: ${(props) => props.theme.colors.primaryDark};
+  color: ${(props) => props.theme.colors.background};
   display: flex;
   flex: 0 1 auto;
   flex-direction: column;
