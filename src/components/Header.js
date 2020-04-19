@@ -5,15 +5,20 @@ import styled from 'styled-components';
 import { SectionLinks } from 'react-scroll-section';
 import Fade from 'react-reveal/Fade';
 import RouteLink from './RouteLink';
-import Logo from './Logo/Portfolio.svg';
+import Logo from './Logo/LM.png';
 
 const capitalize = (s) => s && s[0].toUpperCase() + s.slice(1);
 
 const HeaderContainer = styled(Headroom)`
   .headroom--pinned {
+    span {
+      color: white;
+    }
+    img {
+      filter: brightness(0) invert(1);
+    }
     background: ${(props) => props.theme.colors.primaryDark};
   }
-
   position: absolute;
   width: 100%;
 `;
@@ -50,7 +55,9 @@ const Header = () => (
             const homeLink = home && (
               <Image
                 src={Logo}
-                width="50px"
+                m={2}
+                width="80px"
+                color="white"
                 alt="Portfolio Logo"
                 onClick={home.onClick}
                 style={{

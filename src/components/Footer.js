@@ -44,35 +44,12 @@ Logo.propTypes = {
 const Footer = () => (
   <FooterContainer>
     <Fade bottom>
-      <span>
-        <Text
-          mb={2}
-          pb={1}
-          style={{
-            textTransform: 'uppercase',
-            borderBottom: 'white 3px solid',
-            display: 'table',
-          }}
-        >
-          Powered By
-        </Text>
-      </span>
       <Flex justifyContent="center" alignItems="center">
-        <Logo
-          url="https://www.contentful.com/"
-          logo={ContentfulLogo}
-          alt="Powered by Contentful"
-        />
         <Text m={2} fontSize={4}>
           <span role="img" aria-label="heart">
-            ❤️
+            Made with ❤️ by Loïc Masson
           </span>
         </Text>
-        <Logo
-          url="https://www.gatsbyjs.org/"
-          logo={GatsbyLogo}
-          alt="Gatsby Logo"
-        />
       </Flex>
     </Fade>
   </FooterContainer>

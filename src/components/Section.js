@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Section } from 'react-scroll-section';
-import { Heading } from 'rebass';
+import { Flex, Heading } from 'rebass';
 import PropTypes from 'prop-types';
 import Slide from 'react-reveal/Slide';
 import LinkAnimated from './LinkAnimated';
@@ -35,18 +35,20 @@ Container.propTypes = {
 };
 
 const Header = ({ name, icon = '', label = '' }) => (
-  <Slide left>
-    <Heading color="secondaryDark" mb={4}>
-      <LinkAnimated selected>
-        {name}
-        {icon && (
-          <span role="img" aria-label={label} style={{ marginLeft: '10px' }}>
-            {icon}
-          </span>
-        )}
-      </LinkAnimated>
-    </Heading>
-  </Slide>
+  <Flex justifyContent="center">
+    <Slide left>
+      <Heading color="secondaryDark" mb={6} fontSize={7} mx="auto">
+        <LinkAnimated selected>
+          {name}
+          {icon && (
+            <span role="img" aria-label={label} style={{ marginLeft: '10px' }}>
+              {icon}
+            </span>
+          )}
+        </LinkAnimated>
+      </Heading>
+    </Slide>
+  </Flex>
 );
 
 Header.propTypes = {
