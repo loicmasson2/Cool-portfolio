@@ -10,16 +10,16 @@ const LandingPage = () => {
   const adjectives = ['Cool', 'Efficient', 'Positive'];
   return (
     <Section.Container id="home">
-      <Flex alignItems="center">
-        <Box p={3} width={1}>
+      <Flex alignItems="center" flexDirection={['column', 'row']}>
+        <Flex p={3} width={1} justifyContent="center">
           <Image
             src={ME}
             sx={{
-              width: ['100%', '80%'],
+              width: ['70%', '80%'],
               borderRadius: 8,
             }}
           />
-        </Box>
+        </Flex>
         <Box p={3} width={1}>
           <Heading
             textAlign="center"
@@ -40,7 +40,7 @@ const LandingPage = () => {
           >
             <TextLoop>
               {adjectives.map((text) => (
-                <Text width={[300, 500]} key={text}>
+                <Text width={[300, 300, 500]} key={text}>
                   {text}
                 </Text>
               ))}

@@ -1,10 +1,7 @@
 import React from 'react';
 import { Box, Flex, Text } from 'rebass';
-import ReactMarkdown from 'react-markdown';
 import Fade from 'react-reveal/Fade';
 import Section from '../components/Section';
-import Triangle from '../components/Triangle';
-import markdownRenderer from '../components/MarkdownRenderer';
 
 function createMarkup(text) {
   return {

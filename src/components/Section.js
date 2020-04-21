@@ -37,7 +37,13 @@ Container.propTypes = {
 const Header = ({ name, icon = '', label = '' }) => (
   <Flex justifyContent="center">
     <Slide left>
-      <Heading color="secondaryDark" mb={6} fontSize={7} mx="auto">
+      <Heading
+        color="secondaryDark"
+        mb={6}
+        fontSize={[6, 7]}
+        mx="auto"
+        textAlign={['center', 'left']}
+      >
         <LinkAnimated selected>
           {name}
           {icon && (

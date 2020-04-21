@@ -3,51 +3,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Image, Text, Flex, Box } from 'rebass';
 import styled from 'styled-components';
-import Fade from 'react-reveal/Fade';
 import Section from '../components/Section';
-import { CardContainer, Card } from '../components/Card';
-import SocialLink from '../components/SocialLink';
-import Triangle from '../components/Triangle';
-import ImageSubtitle from '../components/ImageSubtitle';
 import Hide from '../components/Hide';
 import colors from '../../colors';
-
-const Background = () => (
-  <div>
-    <Triangle
-      color="secondaryLight"
-      height={['80vh', '80vh']}
-      width={['100vw', '100vw']}
-      invertX
-    />
-
-    <Triangle
-      color="background"
-      height={['50vh', '20vh']}
-      width={['50vw', '50vw']}
-      invertX
-    />
-
-    <Triangle
-      color="primaryDark"
-      height={['25vh', '40vh']}
-      width={['75vw', '60vw']}
-      invertX
-      invertY
-    />
-
-    <Triangle
-      color="backgroundDark"
-      height={['25vh', '20vh']}
-      width={['100vw', '100vw']}
-      invertY
-    />
-  </div>
-);
-
-const CARD_HEIGHT = '300px';
-
-const MEDIA_QUERY_SMALL = '@media (max-width: 400px)';
 
 const Title = styled(Text)`
   font-size: 32px;
@@ -62,10 +20,6 @@ const TextContainer = styled.div`
   flex-direction: column;
   padding: 10px;
   width: 100%;
-
-  ${MEDIA_QUERY_SMALL} {
-    width: calc(100% - (${CARD_HEIGHT} / 2));
-  }
 `;
 
 function createMarkup(text) {
@@ -75,13 +29,18 @@ function createMarkup(text) {
 }
 
 const Company = ({ name, description, role, logo, flag, period }) => (
-  <Flex flexDirection={['column', 'row']} width={1} my={4} alignItems="center">
-    <Flex width={1 / 2} flex justifyContent="center">
+  <Flex
+    flexDirection={['column', 'column', 'row']}
+    width={1}
+    my={4}
+    alignItems="center"
+  >
+    <Flex width={[1, 1, 1 / 2]} justifyContent="center">
       <Image width={500} height={200} src={logo} />
     </Flex>
-    <Box width={1 / 2}>
+    <Box width={[1, 1, 1 / 2]}>
       <TextContainer>
-        <Title my={2} pb={1}>
+        <Title my={2} pb={1} alignSelf={['center', 'start']}>
           {name}
           {flag && (
             <span role="img" style={{ marginLeft: '10px' }}>
@@ -109,7 +68,7 @@ Company.propTypes = {
   flag: PropTypes.string.isRequired,
 };
 
-const Projects = () => {
+const Companies = () => {
   const companies = [
     {
       name: 'Loyalty Company',
@@ -186,4 +145,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default Companies;

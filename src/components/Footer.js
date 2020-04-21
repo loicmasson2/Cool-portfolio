@@ -3,8 +3,6 @@ import styled from 'styled-components';
 import { Text, Flex, Box } from 'rebass';
 import Fade from 'react-reveal/Fade';
 import PropTypes from 'prop-types';
-import ContentfulLogo from './Logo/Contenful.svg';
-import GatsbyLogo from './Logo/Gatsby.svg';
 
 const FooterContainer = styled.footer`
   padding: 1em;
