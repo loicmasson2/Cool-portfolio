@@ -5,6 +5,7 @@ import { Flex, Heading } from 'rebass';
 import PropTypes from 'prop-types';
 import Slide from 'react-reveal/Slide';
 import LinkAnimated from './LinkAnimated';
+import Background from './Background';
 
 const SectionContainer = styled.div`
   min-height: 100vh;
@@ -21,17 +22,18 @@ const SectionContainer = styled.div`
 
 const DefaultBackground = () => <div />;
 
-const Container = ({ id, children, Background = DefaultBackground }) => (
+const Container = ({ id, children, BackgroundVar = DefaultBackground }) => (
   <Section id={id} style={{ position: 'relative' }}>
-    <Background />
-    <SectionContainer>{children}</SectionContainer>
+    <Background>
+      <SectionContainer>{children}</SectionContainer>
+    </Background>
   </Section>
 );
 
 Container.propTypes = {
   id: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
-  Background: PropTypes.func,
+  BackgroundVar: PropTypes.func,
 };
 
 const Header = ({ name, icon = '', label = '' }) => (
