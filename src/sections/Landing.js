@@ -10,7 +10,7 @@ const LandingPage = () => {
   const name = 'Loïc Masson';
   const adjectives = ['Cool', 'Efficient', 'Positive'];
   return (
-    <Section.Container id="home">
+    <Section.Container id="landing">
       <Flex alignItems="center" flexDirection={['column', 'row']}>
         <Flex p={3} width={1} justifyContent="center">
           <Image
