@@ -5,6 +5,8 @@ import { Image, Text, Flex, Box } from 'rebass';
 import styled from 'styled-components';
 import Section from '../components/Section';
 import Hide from '../components/Hide';
+import ExperienceIcon from '../components/ExperienceIcon';
+
 import colors from '../../colors';
 
 const Title = styled(Text)`
@@ -43,9 +45,11 @@ const Experience = ({ name, period, role, technologies }) => (
       </Flex>
     </Flex>
     <Flex justifyContent={'space-around'}>
-      {technologies.map((t, i) => (
-        <p>{t}</p>
-      ))}
+      <Flex alignItems={'flex-start'}>
+        {technologies.map((t, i) => (
+          <ExperienceIcon name={t}></ExperienceIcon>
+        ))}
+      </Flex>
     </Flex>
   </Flex>
 );
@@ -65,32 +69,32 @@ const Experiences = () => {
       name: 'Loyalty Company',
       period: 'July 2015 - May 2017',
       role: 'Software Developer',
-      technologies: ['Angular', 'PHP', 'Symfony', 'React', 'React Native'],
+      technologies: ['angular', 'php', 'symfony', 'react'],
     },
     {
       name: 'Yousician',
       period: 'May 2017 - September 2018',
       role: 'Software Developer',
-      technologies: ['Angular', 'React', 'Python', 'Flask', 'MongoDB'],
+      technologies: ['angular', 'react', 'python', 'flask', 'mongodb'],
     },
     {
       name: 'Nightingale',
       period: 'November 2018 - April 2019',
       role: 'Software Developer',
       technologies: [
-        'Gatsby',
-        'React',
-        'Prismic',
-        'GraphQL',
-        'Typescript',
-        'AWS',
+        'gatsby',
+        'react',
+        'prismic',
+        'graphql',
+        'typescript',
+        'aws',
       ],
     },
     {
       name: 'Blueprint Genetics',
       period: 'Current position',
       role: 'Software Developer',
-      technologies: ['React', 'Angular', 'PHP', 'GO', 'AWS', 'MySQL'],
+      technologies: ['react', 'angular', 'php', 'go', 'aws', 'mysql'],
     },
   ];
   return (
