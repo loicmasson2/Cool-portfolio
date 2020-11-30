@@ -7,6 +7,7 @@ import BackgroundSecondaryLight from '../components/Backgrounds/BackgroundSecond
 const backgroundMapping = {
   landing: BackgroundPrimaryLight,
   about: BackgroundSecondaryLight,
+  experience: BackgroundPrimaryLight,
 };
 
 const Background = ({ name, children }) => (
