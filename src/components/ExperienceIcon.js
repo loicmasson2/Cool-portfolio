@@ -1,7 +1,6 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import { Image } from 'rebass';
-import BackgroundPrimaryLight from '../components/Backgrounds/BackgroundPrimaryLight.png';
 import angular from './Logo/angular.png';
 import aws from './Logo/aws.png';
 import flask from './Logo/flask.png';
