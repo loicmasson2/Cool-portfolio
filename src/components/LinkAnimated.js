@@ -10,6 +10,9 @@ const LinkAnimated = styled.span`
     `border-bottom:  5px solid ${props.theme.colors.primaryLight}`};
   transition: 0.4s;
   cursor: ${(props) => (props.onClick ? 'pointer' : 'default')};
+  
+  text-size= 64px;
+  font-family: Cabin;
 
   &:after {
     content: '';
