@@ -4,31 +4,11 @@ import PropTypes from 'prop-types';
 import { Image, Text, Flex, Box } from 'rebass';
 import styled from 'styled-components';
 import Section from '../components/Section';
+import H3 from '../components/Typography/H3';
+import Body from '../components/Typography/Body';
+
 import Hide from '../components/Hide';
 import ExperienceIcon from '../components/ExperienceIcon';
-
-import colors from '../../colors';
-
-const Title = styled(Text)`
-  font-size: 32px;
-  font-weight: 600;
-  text-transform: uppercase;
-  display: table;
-  border-bottom: ${(props) => props.theme.colors.primary} 5px solid;
-`;
-
-const TextContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-  width: 100%;
-`;
-
-function createMarkup(text) {
-  return {
-    __html: text,
-  };
-}
 
 const Experience = ({ name, period, role, technologies }) => (
   <Flex
@@ -38,14 +18,17 @@ const Experience = ({ name, period, role, technologies }) => (
     alignItems="center"
     justifyContent={'space-between'}
   >
-    <Flex flexDirection={'column'}>
-      <Flex>{name}</Flex>
+    <Flex flexDirection={'column'} width={1 / 2}>
+      <H3>{name}</H3>
       <Flex>
-        {role} - {period}
+        <Body>{role}</Body>{' '}
+        <Body ml={5} color={'#4467D9'}>
+          {period}
+        </Body>
       </Flex>
     </Flex>
-    <Flex justifyContent={'space-around'}>
-      <Flex alignItems={'flex-start'}>
+    <Flex justifyContent={'flex-start'} width={1 / 3}>
+      <Flex justifyContent={'space-between'} width={1}>
         {technologies.map((t, i) => (
           <ExperienceIcon name={t}></ExperienceIcon>
         ))}
@@ -66,19 +49,13 @@ Experience.propTypes = {
 const Experiences = () => {
   const experiences = [
     {
-      name: 'Loyalty Company',
-      period: 'July 2015 - May 2017',
+      name: 'Blueprint Genetics 🧬',
+      period: 'Current position',
       role: 'Software Developer',
-      technologies: ['angular', 'php', 'symfony', 'react'],
+      technologies: ['react', 'angular', 'php', 'go', 'aws', 'mysql'],
     },
     {
-      name: 'Yousician',
-      period: 'May 2017 - September 2018',
-      role: 'Software Developer',
-      technologies: ['angular', 'react', 'python', 'flask', 'mongodb'],
-    },
-    {
-      name: 'Nightingale',
+      name: 'Nightingale 🩸',
       period: 'November 2018 - April 2019',
       role: 'Software Developer',
       technologies: [
@@ -91,10 +68,16 @@ const Experiences = () => {
       ],
     },
     {
-      name: 'Blueprint Genetics',
-      period: 'Current position',
+      name: 'Yousician 🎼',
+      period: 'May 2017 - September 2018',
       role: 'Software Developer',
-      technologies: ['react', 'angular', 'php', 'go', 'aws', 'mysql'],
+      technologies: ['angular', 'react', 'python', 'flask', 'mongodb'],
+    },
+    {
+      name: 'Loyalty Company 👔',
+      period: 'July 2015 - May 2017',
+      role: 'Software Developer',
+      technologies: ['angular', 'php', 'symfony', 'react'],
     },
   ];
   return (

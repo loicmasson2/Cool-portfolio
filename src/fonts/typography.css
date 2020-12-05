@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'Cabin';
+  src: url('/Cabin-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CabinBold';
+  src: url('/Cabin-Bolf.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
