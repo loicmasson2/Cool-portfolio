@@ -4,7 +4,6 @@ import { Heading, Flex, Box, Text, Image } from 'rebass';
 import TextLoop from 'react-text-loop';
 import Section from '../components/Section';
 import ME from '../components/Logo/ME.jpg';
-import BackgroundPrimaryLight from '../components/Backgrounds/BackgroundPrimaryLight.png';
 
 const LandingPage = () => {
   const name = 'Loïc Masson';

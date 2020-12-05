@@ -81,8 +81,8 @@ const Experiences = () => {
     },
   ];
   return (
-    <Section.Container id="experience">
-      <Section.Header name="Experiences" icon="✨" Box="notebook" />
+    <Section.Container id="experiences">
+      <Section.Header name="Experiences" icon="✨" />
       <Flex
         justifyContent="space-between"
         alignItems="space-between"
