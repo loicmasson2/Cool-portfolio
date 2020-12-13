@@ -14,10 +14,10 @@ const Background = ({ name, children }) => (
   <Box
     sx={{
       px: 6,
-      py: 6,
+      px: 5,
       backgroundRepeat: 'no-repeat',
       backgroundImage: `url(${backgroundMapping[name]})`,
-      backgroundSize: '100% 50%',
+      backgroundSize: '100% 40%',
       backgroundPosition: '0 bottom',
       borderRadius: 8,
     }}
