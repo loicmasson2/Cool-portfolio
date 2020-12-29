@@ -12,9 +12,8 @@ const backgroundMapping = {
 
 const Background = ({ name, children }) => (
   <Box
+    px={[0, 6]}
     sx={{
-      px: 6,
-      px: 5,
       backgroundRepeat: 'no-repeat',
       backgroundImage: `url(${backgroundMapping[name]})`,
       backgroundSize: '100% 40%',
