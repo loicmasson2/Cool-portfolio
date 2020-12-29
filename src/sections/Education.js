@@ -15,12 +15,18 @@ const Education = () => {
         flexWrap="wrap"
         width={1}
       >
-        <Flex flexDirection={'row'} width={1} my={4} alignItems="center">
+        <Flex
+          flexDirection={'row'}
+          width={1}
+          my={4}
+          alignItems="center"
+          textAlign={['center', '']}
+        >
           <Flex flexDirection={'column'}>
             <H3>Université Robert Schuman (Strasbourg III)</H3>
-            <Flex>
+            <Flex mt={[3, 0]} flexDirection={['column', 'row']}>
               <Body>Bachelor Degree IT and web devlopment</Body>
-              <Body ml={5} color={'#4467D9'}>
+              <Body ml={[0, 5]} color={'#4467D9'}>
                 2012 - 2015
               </Body>
             </Flex>

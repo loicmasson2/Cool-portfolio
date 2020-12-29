@@ -12,22 +12,26 @@ import ExperienceIcon from '../components/ExperienceIcon';
 
 const Experience = ({ name, period, role, technologies }) => (
   <Flex
-    flexDirection={'row'}
+    flexDirection={['column', 'row']}
     width={1}
     my={4}
     alignItems="center"
     justifyContent={'space-between'}
   >
-    <Flex flexDirection={'column'} width={1 / 2}>
+    <Flex
+      flexDirection={'column'}
+      width={[1, 1 / 2]}
+      textAlign={['center', '']}
+    >
       <H3>{name}</H3>
-      <Flex>
+      <Flex mt={[3, 0]} flexDirection={['column', 'row']}>
         <Body>{role}</Body>{' '}
-        <Body ml={5} color={'#4467D9'}>
+        <Body ml={[0, 5]} color={'#4467D9'}>
           {period}
         </Body>
       </Flex>
     </Flex>
-    <Flex justifyContent={'flex-start'} width={1 / 3}>
+    <Flex mt={[3, 0]} justifyContent={'flex-start'} width={[1, 1 / 3]}>
       <Flex justifyContent={'space-between'} width={1}>
         {technologies.map((t, i) => (
           <ExperienceIcon name={t}></ExperienceIcon>

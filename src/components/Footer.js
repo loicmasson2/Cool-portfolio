@@ -43,7 +43,7 @@ const Footer = () => (
   <FooterContainer>
     <Fade bottom>
       <Flex justifyContent="center" alignItems="center">
-        <Text m={2} fontSize={4}>
+        <Text m={2} fontSize={4} textAlign="center">
           <span role="img" aria-label="heart">
             Made with ❤️ by Loïc Masson
           </span>
