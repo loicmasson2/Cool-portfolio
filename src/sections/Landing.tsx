@@ -1,13 +1,14 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
-import { Heading, Flex, Box, Text, Image } from 'rebass';
-import TextLoop from 'react-text-loop';
+import { Flex, Box, Image } from 'rebass';
 import Section from '../components/Section';
 import ME from '../components/Logo/ME.jpg';
 import H1 from '../components/Typography/H1';
 import H2 from '../components/Typography/H2';
 import Hide from '../components/Hide';
 
+
+// First section of the poge
 const LandingPage = () => {
   const name = 'Loïc Masson';
   const adjectives = ['Cool', 'Efficient', 'Positive'];
@@ -29,13 +30,7 @@ const LandingPage = () => {
           </H1>
           <Hide xs>
             <H2 color="primary" mb={[3, 5]}>
-              <TextLoop>
-                {adjectives.map((text) => (
-                  <Text width={[100, 300, 500]} key={text}>
-                    {text}
-                  </Text>
-                ))}
-              </TextLoop>
+              {adjectives}
             </H2>
           </Hide>
         </Box>

@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Text, Flex, Box } from 'rebass';
-import Fade from 'react-reveal/Fade';
 import PropTypes from 'prop-types';
 
 const FooterContainer = styled.footer`
+  
   padding: 1em;
   background: ${(props) => props.theme.colors.primaryDark};
   color: ${(props) => props.theme.colors.background};
@@ -15,7 +15,7 @@ const FooterContainer = styled.footer`
   align-items: center;
 `;
 
-const RenponsiveLogo = styled.img`
+const ResponsiveLogo = styled.img`
   width: 100px;
   height: 25px;
 
@@ -25,10 +25,10 @@ const RenponsiveLogo = styled.img`
   }
 `;
 
-const Logo = ({ url, logo, alt = '' }) => (
+const Logo:React.FC<{url:string, logo:string, alt?: string}> = ({ url, logo, alt = '' }) => (
   <Box>
     <a href={url} rel="noopener noreferrer" target="_blank">
-      <RenponsiveLogo src={logo} alt={alt} />
+      <ResponsiveLogo src={logo} alt={alt} />
     </a>
   </Box>
 );
@@ -41,7 +41,6 @@ Logo.propTypes = {
 
 const Footer = () => (
   <FooterContainer>
-    <Fade bottom>
       <Flex justifyContent="center" alignItems="center">
         <Text m={2} fontSize={4} textAlign="center">
           <span role="img" aria-label="heart">
@@ -49,7 +48,6 @@ const Footer = () => (
           </span>
         </Text>
       </Flex>
-    </Fade>
   </FooterContainer>
 );
 

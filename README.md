@@ -12,23 +12,12 @@ Dark Version
 
 ## How To Use 🔧
 
-From your command line, first clone Simplefolio:
 
-```
-# Clone this repository
-$ git clone https://github.com/loicmasson2/Cool-portfolio.git
+### Install
+`npm install`
 
-# Go into the repository
-$ cd Cool-portofolio
+### Run it locally
+`npm run start`
 
-# Remove current origin repository
-$ git remote remove origin
-
-# Install dependencies
-npm run install
-
-# Run it locally
-npm run start
-```
 
 The project should be running on [http://localhost:8000/](http://localhost:8000/)

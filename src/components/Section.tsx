@@ -1,11 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Section } from 'react-scroll-section';
 import { Flex, Heading } from 'rebass';
-import PropTypes from 'prop-types';
-import Slide from 'react-reveal/Slide';
 import LinkAnimated from './LinkAnimated';
-import Background from './Background';
+import Background from '@lokit/black-sheep';
 
 const SectionContainer = styled.div`
   min-height: 100vh;
@@ -20,23 +17,25 @@ const SectionContainer = styled.div`
   scroll-behavior: smooth;
 `;
 
-const Container = ({ id, children, name }) => (
-  <Section id={id} style={{ position: 'relative' }}>
-    <Background name={id}>
-      <SectionContainer>{children}</SectionContainer>
-    </Background>
-  </Section>
-);
-
-Container.propTypes = {
-  id: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired,
-  BackgroundVar: PropTypes.func,
+type ContainerProps = {
+  id: string,
 };
 
-const Header = ({ name, icon = '', label = '' }) => (
+const Container: React.FC<ContainerProps> = ({ id, children }) => (
+    <Background id={id}>
+      <SectionContainer>{children}</SectionContainer>
+    </Background>
+);
+
+
+type HeaderProps = {
+  name: string,
+  icon: string,
+  label: string
+};
+
+const Header: React.FC<HeaderProps> = ({ name, icon = '', label = '' }) => (
   <Flex justifyContent="center">
-    <Slide left>
       <Heading
         color="secondaryDark"
         mb={6}
@@ -53,15 +52,8 @@ const Header = ({ name, icon = '', label = '' }) => (
           )}
         </LinkAnimated>
       </Heading>
-    </Slide>
   </Flex>
 );
-
-Header.propTypes = {
-  name: PropTypes.string.isRequired,
-  icon: PropTypes.string,
-  label: PropTypes.string,
-};
 
 export default {
   Container,

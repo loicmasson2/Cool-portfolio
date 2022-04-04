@@ -1,27 +1,31 @@
-/* eslint-disable react/jsx-props-no-spreading */
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Image, Text, Flex, Box } from 'rebass';
-import styled from 'styled-components';
-import Section from '../components/Section';
-import H3 from '../components/Typography/H3';
-import Body from '../components/Typography/Body';
+import React from 'react'
+import { Flex } from 'rebass'
 
-import Hide from '../components/Hide';
-import ExperienceIcon from '../components/ExperienceIcon';
+import Section from '../components/Section'
+import H3 from '../components/Typography/H3'
+import Body from '../components/Typography/Body'
+import ExperienceIcon from '../components/ExperienceIcon'
 
-const Experience = ({ name, period, role, technologies }) => (
+type ExperienceProps = {
+  name: string,
+  period: string,
+  role: string
+  technologies: string[]
+}
+
+// Third section of the page
+const Experience: React.FC<ExperienceProps> = ({ name, period, role, technologies }) => (
   <Flex
     flexDirection={['column', 'row']}
     width={1}
     my={4}
-    alignItems="center"
+    alignItems='center'
     justifyContent={'space-between'}
   >
     <Flex
       flexDirection={'column'}
       width={[1, 1 / 2]}
-      textAlign={['center', '']}
+      textAlign={['center']}
     >
       <H3>{name}</H3>
       <Flex mt={[3, 0]} flexDirection={['column', 'row']}>
@@ -34,21 +38,12 @@ const Experience = ({ name, period, role, technologies }) => (
     <Flex mt={[3, 0]} justifyContent={'flex-start'} width={[1, 1 / 3]}>
       <Flex justifyContent={'space-between'} width={1}>
         {technologies.map((t, i) => (
-          <ExperienceIcon name={t}></ExperienceIcon>
+          <ExperienceIcon key={i} name={t}/>
         ))}
       </Flex>
     </Flex>
   </Flex>
-);
-
-Experience.propTypes = {
-  name: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  role: PropTypes.string.isRequired,
-  period: PropTypes.string.isRequired,
-  logo: PropTypes.string.isRequired,
-  flag: PropTypes.string.isRequired,
-};
+)
 
 const Experiences = () => {
   const experiences = [
@@ -83,22 +78,22 @@ const Experiences = () => {
       role: 'Software Developer',
       technologies: ['angular', 'php', 'symfony', 'react'],
     },
-  ];
+  ]
   return (
-    <Section.Container id="experiences">
-      <Section.Header name="Experiences" icon="✨" />
+    <Section.Container id='experiences'>
+      <Section.Header name='Experiences' label='Experiences' icon='✨' />
       <Flex
-        justifyContent="space-between"
-        alignItems="space-between"
-        flexWrap="wrap"
+        justifyContent='space-between'
+        alignItems='space-between'
+        flexWrap='wrap'
         width={1}
       >
         {experiences.map((p, i) => (
-          <Experience key={p.id} {...p} />
+          <Experience name={p.name} period={p.period} role={p.role} technologies={p.technologies}  />
         ))}
       </Flex>
     </Section.Container>
-  );
-};
+  )
+}
 
-export default Experiences;
+export default Experiences

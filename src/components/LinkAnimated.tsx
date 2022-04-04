@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
-const LinkAnimated = styled.span`
+type LinkAnimatedProps = {
+  selected: boolean,
+};
+
+const LinkAnimated = styled.span<LinkAnimatedProps>`
   text-decoration: none;
   position: relative;
   padding-bottom: 5px;
@@ -10,10 +14,8 @@ const LinkAnimated = styled.span`
     `border-bottom:  5px solid ${props.theme.colors.primaryLight}`};
   transition: 0.4s;
   cursor: ${(props) => (props.onClick ? 'pointer' : 'default')};
-  
-  text-size= 64px;
+  text-size: 64px;
   font-family: Cabin;
-
   &:after {
     content: '';
     position: absolute;
